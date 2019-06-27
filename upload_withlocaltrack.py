@@ -24,6 +24,9 @@ ap.add_argument("-k", "--key", required=True,
 args = vars(ap.parse_args())
 
 rootdir = args["folder"]
+if rootdir[-1] != '/':
+    rootdir = rootdir + '/'
+
 listFile = 'uploaded.txt'
 
 
